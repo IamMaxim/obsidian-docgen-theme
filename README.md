@@ -16,6 +16,46 @@ primary mode; a light mode ships alongside it.
   fonts render regardless of how Obsidian injects the stylesheet (no external
   font requests, works fully offline).
 - **Dark and light modes**, both tuned from the same token set.
+- **Bullet journal checkboxes** — 23 task markers, styled in the docgen
+  palette. See [Task markers](#task-markers).
+
+## Task markers
+
+Write any of these inside the brackets of a task item — `- [>] Move to Friday`.
+Obsidian exposes the character as `data-task`, and the theme styles it.
+
+The four **state** markers keep the checkbox, because they answer *is this
+done*:
+
+| | Marker | Meaning |
+| --- | --- | --- |
+| ☐ | `[ ]` | To do |
+| ☑ | `[x]` | Done |
+| ◧ | `[/]` | In progress — box with its left half filled |
+| ⊟ | `[-]` | Cancelled — struck through, like done |
+
+Everything else is an **annotation**: no box, just an icon, because it answers
+*what kind of thing is this*:
+
+| Marker | Meaning | | Marker | Meaning |
+| --- | --- | --- | --- | --- |
+| `[>]` | Forwarded | | `[b]` | Bookmark |
+| `[<]` | Scheduled | | `[l]` | Location |
+| `[!]` | Important | | `[n]` | Note |
+| `[?]` | Question | | `[k]` | Key |
+| `[*]` | Star | | `[p]` | Pro |
+| `[I]` | Idea | | `[c]` | Con |
+| `[f]` | Fire / urgent | | `[u]` | Trend up |
+| `[w]` | Win | | `[d]` | Trend down |
+| `["]` | Quote | | `[S]` | Savings |
+| `[i]` | Info | | | |
+
+Icons are [Lucide](https://lucide.dev), the set Obsidian itself ships. They
+size themselves from `--checkbox-size`, which core derives from your text-size
+setting — so checkboxes scale with your font and the theme overrides neither.
+
+The marker set is compatible with the Things and Minimal themes, so notes
+written for those render correctly here.
 
 ## Installation
 
