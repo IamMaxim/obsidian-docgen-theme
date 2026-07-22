@@ -480,6 +480,9 @@ li[data-task="/"] > p > input:checked {
 	border: 0;
 	box-shadow: inset 0 0 0 1px var(--accent);
 	background-image: none;
+	/* the half-fill below is a square child over a rounded box — clip it so it
+	   picks up --checkbox-radius instead of overshooting the corners. */
+	overflow: hidden;
 }
 input[data-task="/"]:checked::after,
 li[data-task="/"] > input:checked::after,
